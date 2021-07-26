@@ -5,7 +5,7 @@ export default function User() {
     <h1>Usuários</h1>
   );
 }
-
+/*
 export async function getServerSideProps(context) {
   const res = await fetch(`https://192.168.0.20:8001/users`)
   const data = await res.json()
@@ -22,4 +22,7 @@ export async function getServerSideProps(context) {
       
     }, // will be passed to the page component as props
   }
+  
 }
+
+*/
