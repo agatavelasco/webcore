@@ -1,4 +1,9 @@
-import { Button, Flex, FormControl, FormLabel, Input, Link, Stack, Text } from "@chakra-ui/react";
+import { Button, Flex, FormControl, FormLabel, Input, Stack, Text } from "@chakra-ui/react";
+import Link from 'next/link'
+import { SubmitHandler, useForm } from 'react-hook-form'
+import * as yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup'
+
 
 export  default function Register() {
   return(
@@ -19,7 +24,7 @@ export  default function Register() {
       flexDir="column"
     >
 
-      <Text fontSize="xl" fontWeight="bold" mb="4">Criar sua conta</Text>
+      <Text fontSize="xl" fontWeight="bold" mb="4">Crie sua conta</Text>
         
         <Stack spacing="4">
 
@@ -78,7 +83,9 @@ export  default function Register() {
         </Stack>
 
         <Button type="submit" colorScheme="yellow" mt="6" size="lg" mb="4">Entrar</Button>
-        <Flex>Já tem uma conta? <Link href="/" color="blue.400"> Acesse </Link></Flex>
+        <Flex>Já tem uma conta?
+          <Flex color="blue.400"><Link href="/"> Acesse </Link></Flex>
+        </Flex>
     
     </Flex>
   </Flex>
